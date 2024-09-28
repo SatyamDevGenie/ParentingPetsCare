@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import chalk from "chalk";
+import { errorHandler, notFound } from "./middlewares/errorMiddleware.js";
 
 dotenv.config();
 connectDB();
@@ -11,6 +12,10 @@ const app = express();
 app.get("/", (req, res)=>{
     res.send("API is running")
 })
+
+// Error Handling Middleware
+app.use(errorHandler);
+app.use(notFound);
 
 const PORT = process.env.PORT || 5000;
 

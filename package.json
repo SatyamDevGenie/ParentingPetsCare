@@ -1,0 +1,11 @@
+{
+  "name": "pets-care",
+  "version": "1.0.0",
+  "description": "parenting petsCare application using mern stack technologies",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Satyam Sawant",
+  "license": "UNLICENSED"
+}

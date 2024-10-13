@@ -4,6 +4,7 @@ import connectDB from "./config/db.js";
 import chalk from "chalk";
 import { errorHandler, notFound } from "./middlewares/errorMiddleware.js";
 import userRoutes from "./routes/userRoutes.js";
+import petRoutes from "./routes/petRoutes.js";
 
 dotenv.config();
 connectDB();
@@ -20,6 +21,7 @@ app.get("/", (req, res)=>{
 
 // Routes
 app.use("/api/users", userRoutes);
+app.use("/api/pets", petRoutes);
 
 // Error Handling Middleware
 app.use(errorHandler);
